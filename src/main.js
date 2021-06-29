@@ -6,7 +6,8 @@ let config = {
 }
 let game = new Phaser.Game(config);
 
-//set UI sizes
+//test something else
+//sets UI sizes
 let borderUISize = game.config.height / 15;
 let borderPadding = borderUISize / 3;
 //reserve keyboard vars
