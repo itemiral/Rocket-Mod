@@ -11,6 +11,12 @@ Players can control the projectile after shooting - 5 pts
 Created my own music for background using Chrome Labs - 5 pts
 Changed the art of borders - 10 pts
 Finished tutorial - 20 pts
+
+//second submission
+Added mouse movement - 20 (the beetle is following mouse cursor, 
+    works with the projectile after its fired)
+Added Fire Sign when shooting - 5
+Added 4 different Sounds for explosion and randomized them - 10
 */
 
 
@@ -25,5 +31,7 @@ let game = new Phaser.Game(config);
 //sets UI sizes
 let borderUISize = game.config.height / 15;
 let borderPadding = borderUISize / 3;
+
+
 //reserve keyboard vars
-let keyF, keyR, keyLEFT, keyRIGHT;
+let keyF, keyR, keyLEFT, keyRIGHT, mouseClick, mouseX, mouseY;

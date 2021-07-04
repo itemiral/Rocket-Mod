@@ -18,8 +18,17 @@ class Rocket extends Phaser.GameObjects.Sprite {
                 this.x += this.moveSpeed;
             }
         }
+
+        // mouse controls ()
+        if(!this.isFiring) {
+            if ((mouseX.x >= 40 && mouseX.x <= 320) && (mouseY.y <= 480 && mouseY.y >= 0) && this.x >= 47){
+                this.x -= 2; 
+            } else if ((mouseX.x >= 320 && mouseX.x <= 614) && this.x <= 578){
+                this.x += 2; 
+            }
+        }
         // fire button
-        if(Phaser.Input.Keyboard.JustDown(keyF) && !this.isFiring) {
+        if(Phaser.Input.Keyboard.JustDown(keyF) && !this.isFiring || mouseClick.isDown) {
             this.isFiring = true;
             this.sfxRocket.play();  // play sfx
         }
@@ -30,6 +39,11 @@ class Rocket extends Phaser.GameObjects.Sprite {
                 this.x -= this.moveSpeed;
             } else if (keyRIGHT.isDown && this.x <= game.config.width - borderUISize - this.width) {
                 this.x += this.moveSpeed;
+            }
+            if ((mouseX.x >= 40 && mouseX.x <= 320) && (mouseY.y <= 480 && mouseY.y >= 0) && this.x >= 47){
+                this.x -= 2; 
+            } else if ((mouseX.x >= 320 && mouseX.x <= 614) && this.x <= 578){
+                this.x += 2; 
             }
         }
         // reset on miss
