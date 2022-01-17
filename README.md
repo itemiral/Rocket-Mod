@@ -1,3 +1,2 @@
 # Rocket-Mod
-Modification of Rocket Patrol tutorial
-
+Modification of Rocket Patrol Game
